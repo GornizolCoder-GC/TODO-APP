@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <p> Siz rostan {{ object.title }}-ni o`chirmoqchimisiz? </p>
+        <button type="submit" class="btn btn-danger">Ha</button>
+        <a href="{% url 'home' %}" class="btn btn-success">Yuq</a>
+
+    </form>
+{% endblock %}
